@@ -8,6 +8,7 @@
     <title>My Developer Skills</title>
 </head>
 <body>
+  <img src="https://imgur.com/ciw8Uhw.png" alt="">
     <a href="/">Home</a>
     <h1>My Developer Skills</h1>
     <ul>
@@ -15,7 +16,7 @@
         <li>
           <a href="/skills/<%= s.id %>"><%= s.skill %></a>
             - 
-          <%= s.learned ? 'learned' : 'not learned yet' %>
+          <span><%= s.learned ? 'learned' : 'not learned yet' %></span>
         </li>
       <% }); %>
     </ul>
