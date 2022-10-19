@@ -16,7 +16,7 @@
         <li>
           <a href="/skills/<%= s.id %>"><%= s.skill %></a>
             - 
-          <span><%= s.learned ? 'learned' : 'not learned yet' %></span>
+          <span style="<%= s.learned ? "color: green" : "color: red" %>"><%= s.learned ? 'learned' : 'not learned yet' %></span>
         </li>
       <% }); %>
     </ul>
