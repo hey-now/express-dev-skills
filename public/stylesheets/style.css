@@ -18,6 +18,9 @@ img {
 .edit-form {
   padding: 10px;
 }
+#new-form {
+  padding: 10px;
+}
 #skill, #descr {
   width: 300px;
   padding: 10px;

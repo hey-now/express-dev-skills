@@ -1,8 +1,11 @@
 <%- include('../partials/header') %>
 
-<form action="/skills" method="POST">
-    Skill:  <input type="text" name="skill">
-    Description:  <input type="text" name="descr">
+<a href="/skills">Back to Skills</a>
+<br>
+
+<form id="new-form" action="/skills" method="POST">
+    Skill:  <input id="skill" type="text" name="skill">
+    Description:  <input id="descr" type="text" name="descr">
     <button type="submit">Save Skill</button>
 </form>
 
