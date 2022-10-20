@@ -17,7 +17,14 @@ img {
 }
 .edit-form {
   padding: 10px;
-
+}
+#skill, #descr {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+}
+#check {
+  margin-bottom: 20px;
 }
 /* li {
   list-style: url('https://imgur.com/ciw8Uhw.png');
