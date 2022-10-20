@@ -1,5 +1,5 @@
 const skills = [
-    {id: 1, skill: 'HTML', learned: true, descr: 'Web design and structuring'},
+    {id: 1, img:'https://imgur.com/ciw8Uhw.png', skill: 'HTML', learned: true, descr: 'Web design and structuring'},
     {id: 2, skill: 'CSS', learned: true, descr: 'Flexbox, grid, and Resposive design'},
     {id: 3, skill: 'JavaScript', learned: true, descr: 'General use, OOP fundamentals, and syntax'},
     {id: 4, skill: 'NodeJS', learned: true, descr: 'Client-Server HTTP Communications'},
@@ -13,7 +13,14 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
+    create
 };
+
+function create(skill) {
+  skill.id = Date.now() % 1000000;
+  skill.learned = false;
+  skills.push(skill);
+}
 
 function getOne(id) {
     id = parseInt(id);

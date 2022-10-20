@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>My Developer Skills</title>
-</head>
-<body>
-  <img src="https://imgur.com/ciw8Uhw.png" alt="">
-    <a href="/">Home</a>
-    <h1>My Developer Skills</h1>
-    <ul>
-      <% skills.forEach(function(s) { %>
-        <li>
-          <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-            - 
-          <span style="<%= s.learned ? "color: green" : "color: red" %>"><%= s.learned ? 'learned' : 'not learned yet' %></span>
-        </li>
-      <% }); %>
-    </ul>
-  </body>
-</html>
+<%- include('../partials/header') %>
+
+  <ul>
+    <% skills.forEach(function(s) { %>
+      <li>
+        <!-- <img src="<%= s.img %>" alt=""> -->
+        <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+          - 
+        <span style="<%= s.learned ? "color: green" : "color: red" %>"><%= s.learned ? 'learned' : 'not learned yet' %></span>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/skills/new">Add New Skill</a>
+
+<%- include('../partials/footer') %>
