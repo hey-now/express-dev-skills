@@ -12,5 +12,12 @@
   >
     <button>Delete Skill</button>
   </form>
+  <form 
+  action="/skills/<%= skill.id %>/edit"
+  method="GET"
+  class = "edit-form"
+  >
+    <button>Edit Skill</button>
+  </form>
 
 <%- include('../partials/footer') %>
