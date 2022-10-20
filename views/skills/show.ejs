@@ -5,5 +5,12 @@
   <h3><%= skill.skill %></h3>
   <h3>Learned: <%= skill.learned ? 'Yes' : 'No' %></h3>
   <h4>Description: <%= skill.descr %></h4>
-  
+  <form 
+  action="/skills/ <%= skill.id %>?_method=DELETE"
+  method="POST"
+  class = "delete-form"
+  >
+    <button>Delete Skill</button>
+  </form>
+
 <%- include('../partials/footer') %>
